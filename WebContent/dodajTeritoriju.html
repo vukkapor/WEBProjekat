@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vanredne situacije</title>
+<link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src= "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src= "js/index.js"></script>
+<script type="text/javascript" src= "js/logout.js"></script>
+<script type="text/javascript" src= "js/registrujTeritoriju.js"></script>
+
+
+</head>
+
+    <body style="background-color: black">
+        
+        
+        <div class="loginDiv" id="regTerrForm">
+			<form action="" method="post">
+				<h3 style="text-align: center">Registruj Teritoriju</h3>
+				<br>
+				<div class="form-group row">
+					<label><b>Naziv</b></label>
+					<input class="form-control" type="text" required id="naziv" autofocus>
+				</div>
+				<div class="form-group row">
+					<label><b>Povrsina</b></label>
+					<input class="form-control" type="number" min="1" required id="povrsina">
+				</div>
+				<div class="form-group row">
+					<label><b>Populacija</b></label>
+					<input class="form-control" type="number" min="1" required id="stanovnika">
+				</div>
+
+				<button type="submit" class="btn btn-success" style="margin-left: 30%; width: 45%;">
+					Submit
+				</button>
+			</form>
+        </div>
+    </body>
+</html>

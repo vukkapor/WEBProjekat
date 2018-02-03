@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vanredne situacije</title>
+<link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src= "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src= "js/index.js"></script>
+<script type="text/javascript" src= "js/logout.js"></script>
+
+</head>
+
+<body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Cover</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="pocetna.html">Home</a>
+            <a class="nav-link active" href="dodajTeritoriju.html">Dodaj Teritoriju</a>
+            <a class="nav-link" href="#">Prijavi situaciju</a>
+            <a class="nav-link" href="#">Profil</a>
+            <a class="nav-link" href="#" onclick="logout();">Logout</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+       		<h1 style="text-align: center; color: red">Vanredne situacije</h1>
+        
+		<div class="mainDiv" style="background-color: rgba(250,250,250,0.8); margin-left:17%; margin-right:17%">
+			<div class="col-md-3">
+				<select class="form-control" id="choiceSelect">
+				    <option value="all">All</option>
+				    <option value="date">Date</option>
+				    <option value="territory">Territory</option>
+				    <option value="emergencyLevel">Emergency Level</option>
+				    <option value="noVolunteer">No Volunteer</option>
+				</select>
+				
+				<div id="inputStuffPlace"> </div>
+				
+				<input type="button" class="btn btn-default" onclick="situationFilter()" value="Filter">
+			</div>
+			
+			<div class="col-md-3">
+				<select class="form-control" id="searchSelect">
+				    <option value="all">All</option>
+				    <option value="territoryName">Territory Name</option>
+				    <option value="district">District</option>
+				    <option value="description">Description</option>
+				    <option value="volunteer">Volunteer</option>
+				</select>
+				
+				<div id="searchSelectInput"> </div>
+				
+				<input type="button" class="btn btn-default" onclick="situationSearch()" value="Search">
+			</div>
+			<br><br><br><br>
+
+      </main>
+
+      <footer class="mastfoot mt-auto">
+       
+      </footer>
+    </div>
+
+
+
+</body>
+</html>

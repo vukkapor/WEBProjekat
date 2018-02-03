@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registracija</title>
+<link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styleReg.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/reg.js"></script>
+
+</head>
+<body class="bg-light">
+
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2>Registracija</h2>
+      </div>
+
+      
+        <div class="col-md-20 order-md">
+          <h4 class="mb-3">Podaci</h4>
+          <form class="needs-validation" action="" method="POST" id="regForma" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Ime</label>
+                <input type="text" class="form-control" id="ime" placeholder="Vuk" value="" required="">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label >Prezime</label>
+                <input type="text" class="form-control" id="prezime" placeholder="Kapor" value="" required="">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="username">Korisnicko ime</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="korisnicko" placeholder="Korisnicko ime" required="">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="address">Lozinka</label>
+              <input type="text" class="form-control" id="lozinka" placeholder="Password" required="">
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+
+        
+
+            <div class="mb-3">
+              <label for="address2">Telefon <span class="text-muted"></span></label>
+              <input type="text" class="form-control" id="telefon" placeholder="068123456">
+            </div>
+            <div class="mb-3">
+				<label class="labels">Slika :</label> 
+					<input type="file" id="slika" onchange="previewFile()">
+					<img src="http://localhost:8080/Projekat/blank.png" height="200" alt="Image preview...">
+					
+				<tr>
+            </div>
+            
+            <div class="mb-3">
+                <label for="country">Teritorija</label>
+                <select class="custom-select d-block w-100" id="teritorijaLista" >                
+                </select>
+              </div>          
+              
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="register()">Registruj se</button>
+
+            <script>
+		   function previewFile(){
+		       var preview = document.querySelector('img'); //selects the query named img
+		       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+		       var reader  = new FileReader();
+		
+		       reader.onloadend = function () {
+		           preview.src = reader.result;
+		       }
+		
+		       if (file) {
+		           reader.readAsDataURL(file); //reads the data as a URL
+		       } else {
+		           preview.src = "";
+		       }
+		  }</script>
+		  
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+      </footer>
+    </div>
+
+</body>
+</html>
